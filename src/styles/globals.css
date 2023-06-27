@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+@media and screen (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media and screen (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+.rich-text h1 {
+  @apply text-4xl font-medium text-white-100;
+}
+
+.rich-text h2 {
+  @apply text-3xl font-medium text-white-100;
+}
+
+.rich-text h3 {
+  @apply text-2xl font-medium text-white-100;
+}
+
+.rich-text h4 {
+  @apply text-2xl font-medium text-white-100;
+}
+
+.rich-text h5 {
+  @apply text-xl font-medium text-white-100;
+}
+
+.rich-text ul {
+  @apply list-disc;
+}
