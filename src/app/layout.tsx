@@ -9,8 +9,12 @@ const rubik = Rubik({
 });
 
 export const metadata = {
-  title: "Tiago Oliversan",
-  description: "Tiago Oliversan",
+  title: "IA Hub",
+  description:
+    "Um site gratuito para você ficar por dentro de todas as inteligencias artificiais do mundo.",
+  icons: {
+    icon: "/images/logo.svg",
+  },
 };
 
 export default function RootLayout({
