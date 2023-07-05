@@ -46,7 +46,16 @@ export default async function Home() {
         </div>
       </section>
       <section className="flex flex-col items-start space-y-12">
-        <h2 className="text-5xl font-medium text-white-100">Prompts</h2>
+        <div className="flex items-end justify-between w-full">
+          <h2 className="text-5xl font-medium text-white-100">Prompts</h2>
+          <Link
+            href="/prompts"
+            className="text-blue-600 text-base font-medium hover:text-blue-400 transition-all"
+          >
+            Ver mais...
+          </Link>
+        </div>
+
         <div className="w-full flex flex-wrap items-center gap-4 justify-between  mt-16">
           {promptsData.data.map(({ id, attributes }) => (
             <Card
