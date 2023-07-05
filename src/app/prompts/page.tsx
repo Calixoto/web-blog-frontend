@@ -3,7 +3,7 @@ import { fetchData } from "@/services/api";
 import { DataType } from "@/types/promptTypes";
 
 export default async function Prompts() {
-  const promptsData: DataType = await fetchData("prompts", 3);
+  const promptsData: DataType = await fetchData("prompts");
   return (
     <main className="max-w-7xl w-full mx-auto space-y-28">
       <section className="flex flex-col items-start space-y-12">
@@ -17,7 +17,7 @@ export default async function Prompts() {
               slug={attributes.slug}
               thumbnail={attributes.thumbnail.data.attributes.url}
               category={attributes.category.data.attributes.name}
-              href="tools"
+              href="prompts"
             />
           ))}
         </div>

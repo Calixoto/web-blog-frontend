@@ -1,4 +1,3 @@
-import { Button } from "@/components/Button";
 import { PostRenderer } from "@/components/PostRenderer";
 import { fetchDataBySlug } from "@/services/api";
 import { DataTypeBySlug } from "@/types/promptTypes";
@@ -12,6 +11,8 @@ export default async function Prompt({ params }: { params: { slug: string } }) {
   const data = response.data[0].attributes;
   const thumbnailURL = data.thumbnail.data.attributes.url;
   const title = data.title;
+
+  console.log(data.blocks);
   return (
     <main className="max-w-4xl w-full flex flex-col items-start justify-center mx-auto space-y-14">
       <h2 className="text-5xl font-medium text-white-100">{title}</h2>
@@ -29,8 +30,6 @@ export default async function Prompt({ params }: { params: { slug: string } }) {
       {data.blocks.map((section: any, index: number) =>
         PostRenderer(section, index)
       )}
-
-      <Button>Acessar IA</Button>
     </main>
   );
 }

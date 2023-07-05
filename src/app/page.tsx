@@ -3,6 +3,7 @@ import { Card } from "@/components/Card";
 import { Newsletter } from "@/components/Newsletter";
 import { fetchData } from "@/services/api";
 import { DataType } from "@/types/promptTypes";
+import Link from "next/link";
 
 type Data = {
   id: number;
@@ -19,7 +20,17 @@ export default async function Home() {
     <main className="max-w-7xl w-full mx-auto space-y-28">
       <Newsletter />
       <section className="flex flex-col items-start space-y-12">
-        <h2 className="text-5xl font-medium text-white-100">Ferramentas IA</h2>
+        <div className="flex items-end justify-between w-full">
+          <h2 className="text-5xl font-medium text-white-100">
+            Ferramentas IA
+          </h2>
+          <Link
+            href="/tools"
+            className="text-blue-600 text-base font-medium hover:text-blue-400 transition-all"
+          >
+            Ver mais...
+          </Link>
+        </div>
         <div className="w-full flex flex-wrap items-center gap-4 justify-between  mt-16">
           {aiToolsData.data.map(({ id, attributes }) => (
             <Card
