@@ -1,9 +1,12 @@
 import { stringify } from "qs";
 
-export const fetchData = async (path: string) => {
+export const fetchData = async (path: string, pageSize?: number) => {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
   const strapi_url = process.env.NEXT_PUBLIC_STRAPI_API_URL;
   const params = {
+    pagination: {
+      pageSize: pageSize,
+    },
     sort: { createdAt: "desc" },
     populate: {
       thumbnail: { fields: ["url"] },

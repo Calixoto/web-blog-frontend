@@ -10,8 +10,10 @@ type Data = {
 };
 
 export default async function Home() {
-  const promptsData: DataType = await fetchData("prompts");
-  const aiToolsData: DataType = await fetchData("ai-tools");
+  const promptsData: DataType = await fetchData("prompts", 3);
+  const aiToolsData: DataType = await fetchData("ai-tools", 3);
+
+  console.log(aiToolsData);
 
   return (
     <main className="max-w-7xl w-full mx-auto space-y-28">
@@ -27,6 +29,7 @@ export default async function Home() {
               slug={attributes.slug}
               thumbnail={attributes.thumbnail.data.attributes.url}
               category={attributes.category.data.attributes.name}
+              href="tools"
             />
           ))}
         </div>
@@ -42,6 +45,7 @@ export default async function Home() {
               slug={attributes.slug}
               thumbnail={attributes.thumbnail.data.attributes.url}
               category={attributes.category.data.attributes.name}
+              href="prompts"
             />
           ))}
         </div>

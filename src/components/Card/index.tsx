@@ -7,6 +7,7 @@ type CardProps = {
   thumbnail: string;
   category: string;
   slug: string;
+  href?: string;
 };
 
 export const Card = ({
@@ -15,11 +16,12 @@ export const Card = ({
   slug,
   thumbnail,
   category,
+  href = "",
 }: CardProps) => {
   return (
-    <article className="flex flex-col max-w-sm rounded-md hover:scale-[1.005] group hover:ring-blue-600 transition-all ring-1 ring-gray-900">
+    <article className="flex flex-col max-w-sm max-h-[33.5rem] h-full rounded-md hover:scale-[1.005] group hover:ring-blue-600 transition-all ring-1 ring-gray-900">
       <Link
-        href={`/prompts/${slug}`}
+        href={`/${href}/${slug}`}
         className="flex flex-col items-start justify-start"
       >
         <Image

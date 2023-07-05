@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Rubik } from "next/font/google";
+import Script from "next/script";
 import "../styles/globals.css";
 
 const rubik = Rubik({
@@ -24,6 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <Script async src="https://www.tiktok.com/embed.js"></Script>
       <body className={`${rubik.className} bg-background text-white-300`}>
         <Header />
         {children}
