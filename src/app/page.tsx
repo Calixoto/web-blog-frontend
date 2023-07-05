@@ -14,10 +14,8 @@ export default async function Home() {
   const promptsData: DataType = await fetchData("prompts", 3);
   const aiToolsData: DataType = await fetchData("ai-tools", 3);
 
-  console.log(aiToolsData);
-
   return (
-    <main className="max-w-7xl w-full mx-auto space-y-28">
+    <main className="max-w-7xl w-full mx-auto space-y-28 xl:px-0 px-4">
       <Newsletter />
       <section className="flex flex-col items-start space-y-12">
         <div className="flex items-end justify-between w-full">
@@ -31,7 +29,7 @@ export default async function Home() {
             Ver mais...
           </Link>
         </div>
-        <div className="w-full flex flex-wrap items-center gap-4 justify-between  mt-16">
+        <div className="w-full flex flex-wrap items-center gap-4 lg:justify-between justify-center mt-16">
           {aiToolsData.data.map(({ id, attributes }) => (
             <Card
               key={id}
@@ -56,7 +54,7 @@ export default async function Home() {
           </Link>
         </div>
 
-        <div className="w-full flex flex-wrap items-center gap-4 justify-between  mt-16">
+        <div className="w-full flex flex-wrap items-center gap-4 lg:justify-between justify-center mt-16">
           {promptsData.data.map(({ id, attributes }) => (
             <Card
               key={id}

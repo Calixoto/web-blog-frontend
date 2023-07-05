@@ -19,7 +19,7 @@ const href = "/";
 
 export const Header = () => {
   return (
-    <header className="flex items-center py-4 max-w-7xl mx-auto mb-40">
+    <header className="flex items-center py-4 max-w-7xl mx-auto mb-40 xl:px-0 px-4">
       <nav className="flex items-center justify-between w-full space-x-4">
         <ul className="flex items-end space-x-8">
           <li className="hover:text-blue-600 font-medium text-lg">

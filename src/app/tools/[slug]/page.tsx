@@ -12,7 +12,7 @@ export default async function Tool({ params }: { params: { slug: string } }) {
   const thumbnailURL = data.thumbnail.data.attributes.url;
   const title = data.title;
   return (
-    <main className="max-w-4xl w-full flex flex-col items-start justify-center mx-auto space-y-14">
+    <main className="max-w-4xl w-full flex flex-col items-start justify-center mx-auto space-y-14 xl:px-0 px-4">
       <h2 className="text-5xl font-medium text-white-100">{title}</h2>
       <Image
         src={thumbnailURL}

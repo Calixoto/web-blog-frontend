@@ -1,9 +1,9 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { Rubik } from "next/font/google";
+import { Inter } from "next/font/google";
 import "../styles/globals.css";
 
-const rubik = Rubik({
+const rubik = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });

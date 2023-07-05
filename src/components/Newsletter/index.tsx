@@ -4,7 +4,7 @@ import { Subscribe } from "./subscribe";
 
 export const Newsletter = () => {
   return (
-    <div className="w-full flex items-start justify-between ">
+    <div className="w-full flex items-start justify-center lg:justify-between ">
       <div className="flex flex-col items-start justify-start space-y-5 max-w-2xl break-words">
         <h1 className="break-words text-8xl font-medium text-white-100">
           Explore as melhores IA{"'s"} do mundo
@@ -26,6 +26,7 @@ export const Newsletter = () => {
         loading="lazy"
         width={268}
         height={324}
+        className="hidden lg:block"
       />
     </div>
   );

@@ -5,7 +5,7 @@ import { DataType } from "@/types/promptTypes";
 export default async function Tools() {
   const aiToolsData: DataType = await fetchData("ai-tools");
   return (
-    <main className="max-w-7xl w-full mx-auto space-y-28">
+    <main className="max-w-7xl w-full mx-auto space-y-28 xl:px-0 px-4">
       <section className="flex flex-col items-start space-y-12">
         <h2 className="text-5xl font-medium text-white-100">Ferramentas IA</h2>
         <div className="w-full flex flex-wrap items-start gap-y-8 gap-x-12 justify-center mt-16">
